@@ -19,6 +19,8 @@ body {
     max-width: 400px;
     min-width: 300px;
     height: 80vh;
+    max-height: 600px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -31,6 +33,11 @@ body {
     height: 150px;
 }
 
+a {
+  color: inherit; /* herda a cor do elemento pai */
+  text-decoration: none; /* opcional: remove o sublinhado */
+}
+
 span, p {
     color: rgb(165, 165, 165);
 }
@@ -40,4 +47,44 @@ span, p {
     padding: 10px;
     width: max-content;
     border-radius: 15px;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+    transform: scale(1);
+    }
+    10% {
+    transform: scale(1.2);
+    }
+    20% {
+    transform: scale(1);
+    }
+    30% {
+    transform: scale(1.2);
+    }
+    40% {
+    transform: scale(1);
+    }
+    100% {
+    transform: scale(1); /* permanece normal até reiniciar */
+    }
+}
+
+@keyframes chacoalhar {
+    4% {
+        transform: rotate(10deg);
+    }
+    8% {
+        transform: rotate(-10deg);
+    }
+    12% {
+        transform: rotate(10deg);       
+    }
+    16% {
+        transform: rotate(-10deg);
+    }
+    20% {
+        transform: rotate(0deg);
+    }
 }
